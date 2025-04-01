@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Treasure Hunt</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffdde1;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .hidden-item {
+            display: none;
+            font-size: 20px;
+            margin-top: 20px;
+            color: #d63384;
+        }
+        .heart {
+            width: 50px;
+            cursor: pointer;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>💕 Virtual Treasure Hunt 💕</h1>
+    <p>Find and click on the hidden hearts to reveal sweet surprises!</p>
+    <div class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart" onclick="revealMessage(1)">
+        <p id="message1" class="hidden-item">You are my greatest adventure! ❤️</p>
+        
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart" onclick="revealMessage(2)">
+        <p id="message2" class="hidden-item">Every moment with you is special! 💕</p>
+        
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart" onclick="revealMessage(3)">
+        <p id="message3" class="hidden-item"><img src="your-image-url.jpg" width="200"></p>
+        
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart" onclick="revealMessage(4)">
+        <p id="message4" class="hidden-item"><video width="200" controls>
+            <source src="your-video-url.mp4" type="video/mp4">
+        </video></p>
+    </div>
+    
+    <script>
+        function revealMessage(num) {
+            document.getElementById('message' + num).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
